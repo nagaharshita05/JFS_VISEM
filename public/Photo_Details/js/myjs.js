@@ -28,7 +28,8 @@ function showDetails() {
         "Sundar_Pichai": "images/Sundar_Pichai.jpg",
         "satyanadella": "images/satyanadella.jpg",                
         "AdaLovelace": "images/AdaLovelace.jpg",
-        "madhu": "images/madhu.jpg"
+        "madhu": "images/madhu.jpg",
+        "Harshita" : "images/Harshita.jpg"
     };
 
     // Mapping details
@@ -49,6 +50,7 @@ function showDetails() {
         "Sundar_Pichai": "Sundar Pichai is the CEO of Google.",
         "satyanadella": "Satya Nadella is the CEO of Microsoft.",
         "AdaLovelace": "Ada Lovelace was the first computer programmer."
+        "Harshita": "JFS Tainee,IARE Student."
     };
 
     if (name === "") {
