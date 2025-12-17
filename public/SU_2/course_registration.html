@@ -2,63 +2,59 @@
 <html>
 <head>
     <title>Course Registration Form</title>
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+        }
+        h2 { text-align: center; margin-bottom: 20px; }
+        label { display: block; margin: 10px 0 5px; }
+        .subject-list label { display: block; margin: 5px 0; }
+        .total-box { margin: 20px 0; font-weight: bold; }
+        #result { 
+            margin-top: 20px; 
+            padding: 15px; 
+            border-radius: 8px; 
+            display: none; 
+        }
+        #result.success { background-color: #d4edda; color: #155724; }
+        #result.error { background-color: #ffc0cb; color: #721c24; }
+        button { padding: 10px 15px; border: none; border-radius: 5px; background-color: #007bff; color: #fff; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
 </head>
 <body>
 
 <div class="container">
     <h2>Course Registration Form</h2>
 
-    <form id="regForm">
+    <label>Student Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
 
-        <label>Student Name:</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
+    <label>Select Subjects:</label>
 
-        <label>Select Subjects:</label>
+    <div class="subject-list">
+        <label><input type="checkbox" class="subject" value="1000"> Data Structures (₹1000)</label>
+        <label><input type="checkbox" class="subject" value="1200"> Operating Systems (₹1200)</label>
+        <label><input type="checkbox" class="subject" value="1500"> DBMS (₹1500)</label>
+        <label><input type="checkbox" class="subject" value="1800"> Computer Networks (₹1800)</label>
+        <label><input type="checkbox" class="subject" value="2000"> Java Programming (₹2000)</label>
+    </div>
 
-        <div class="subject-list">
+    <div class="total-box">
+        Total Registration Fee: <span id="total">₹0</span>
+    </div>
 
-            <label>
-                <input type="checkbox" class="subject" value="1000">
-                Data Structures (₹1000)
-            </label>
+    <button type="button" id="submitBtn">Submit Registration</button>
 
-            <label>
-                <input type="checkbox" class="subject" value="1200">
-                Operating Systems (₹1200)
-            </label>
-
-            <label>
-                <input type="checkbox" class="subject" value="1500">
-                DBMS (₹1500)
-            </label>
-
-            <label>
-                <input type="checkbox" class="subject" value="1800">
-                Computer Networks (₹1800)
-            </label>
-
-            <label>
-                <input type="checkbox" class="subject" value="2000">
-                Java Programming (₹2000)
-            </label>
-
-        </div>
-
-        <div class="total-box">
-            Total Registration Fee:  
-            <span id="total">₹0</span>
-        </div>
-
-        <button type="submit">Submit Registration</button>
-    </form>
-	
-	
+    <div id="result"></div>
 </div>
 
-<div id="result"></div>
-
 <script src="js/course_reg_script.js"></script>
-
 </body>
 </html>
