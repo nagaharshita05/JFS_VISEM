@@ -56,9 +56,26 @@ button:hover {
     background: #005fcc;
 }
 #result {
-    background-color: pink;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
+    display: none; /* hidden by default */
+    background-color: #e0e0ff; /* light purple */
+    padding: 20px;
+    margin: 20px auto; /* center horizontally */
+    border-radius: 10px;
     font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* subtle shadow */
+    font-family: Arial, sans-serif;
+    text-align: center; /* center text */
+    max-width: 400px; /* optional: control box width */
+}
+
+#result h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#result p {
+    margin: 8px 0;
+    line-height: 1.5;
 }
