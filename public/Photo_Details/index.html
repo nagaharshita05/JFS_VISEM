@@ -2,17 +2,17 @@
 <html>
 <head>
     <title>Display Photo and Information</title> 
-	<link rel="stylesheet"  href='css/mystyle.css'>
+    <link rel="stylesheet" href="css/mystyle.css">
 </head>
 
 <body>
 
     <h2>Select a Name to Display Photo & Info</h2>   
-    <!-- Dropdown -->
-    <select id="nameSelect" onchange="showDetails()" style='height:40px; width:320px;'>
+
+    <!-- Dropdown + OK Button -->
+    <select id="nameSelect" style="height:40px; width:320px;">
         <option value="">-- Select Name --</option>
 
-        <!-- Earlier personalities -->
         <option value="guido">Guido van Rossum (Python)</option>
         <option value="dennis">Dennis M. Ritchie (C)</option>
         <option value="james">James Gosling (Java)</option>
@@ -20,7 +20,6 @@
         <option value="juergen">Juergen Hoeller (Spring Framework)</option>
         <option value="krishna">E Krishna Rao Patro (JFS Trainer)</option>
 
-        <!-- New personalities -->
         <option value="bill_gates">Bill Gates (Microsoft)</option>
         <option value="steve_jobs">Steve Jobs (Apple)</option>
         <option value="elon_musk">Elon Musk (Tesla/SpaceX)</option>
@@ -29,11 +28,15 @@
         <option value="tim_berner">Tim Berners-Lee (WWW)</option>
         <option value="Sundar_Pichai">Sundar Pichai (Google CEO)</option>
         <option value="satyanadella">Satya Nadella (Microsoft CEO)</option>
-        
         <option value="AdaLovelace">Ada Lovelace (1st Programmer)</option>
         <option value="madhu">Madhu (JFS Trainer, CDC, IARE Hyderabad)</option>
         <option value="Harshita">Harshita (JFS Trainer, CDC, IARE Hyderabad)</option>
     </select>
+
+    <!-- OK Button -->
+    <button onclick="showDetails()" style="height:40px; width:80px; margin-left:10px;">
+        OK
+    </button>
 
     <div class="container">
 
@@ -50,7 +53,7 @@
 
     </div>
 
-   <script src="js/myjs.js"> </script>
+    <script src="js/myjs.js"></script>
 
 </body>
 </html>

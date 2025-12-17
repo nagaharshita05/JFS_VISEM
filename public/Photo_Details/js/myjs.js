@@ -1,16 +1,23 @@
-      
 function showDetails() {
     let name = document.getElementById("nameSelect").value;
 
     let photo = document.getElementById("photo");
     let info = document.getElementById("infoText");
 
-    // Remove frame before adding new one
-    photo.classList.remove("photo-james");
-	//photo-james-blue
-	 photo.classList.remove("photo-james-blue");
+    // If nothing selected
+    if (name === "") {
+        alert("Please select a person first!");
+        return;
+    }
 
-    // Mapping names to photos
+    // Confirmation popup 
+    let confirmSearch = confirm("Are you sure you want to search this person?");
+
+    if (!confirmSearch) {
+        return;
+    }
+
+    // Photo mapping
     let photos = {
         "guido": "images/guido.jpg",
         "dennis": "images/dennis.jpg",
@@ -18,7 +25,6 @@ function showDetails() {
         "stroustrup": "images/stroustrup.jpg",
         "juergen": "images/juergen.jpg",
         "krishna": "images/krishna.jpg",
-
         "bill_gates": "images/bill_gates.jpg",
         "steve_jobs": "images/steve_jobs.jpg",
         "elon_musk": "images/elon_musk.jpg",
@@ -26,13 +32,13 @@ function showDetails() {
         "linus_torvalds": "images/linus_torvalds.jpeg",
         "tim_berner": "images/tim_berner.jpg",
         "Sundar_Pichai": "images/Sundar_Pichai.jpg",
-        "satyanadella": "images/satyanadella.jpg",                
+        "satyanadella": "images/satyanadella.jpg",
         "AdaLovelace": "images/AdaLovelace.jpg",
         "madhu": "images/madhu.jpg",
-        "Harshita" : "images/Harshita.jpg"
+        "Harshita": "images/Harshita.jpg"
     };
 
-    // Mapping details
+    // Details mapping
     let details = {
         "guido": "Guido van Rossum created Python in 1991.",
         "dennis": "Dennis Ritchie developed C and co-created UNIX.",
@@ -49,25 +55,11 @@ function showDetails() {
         "tim_berner": "Tim Berners-Lee invented the World Wide Web.",
         "Sundar_Pichai": "Sundar Pichai is the CEO of Google.",
         "satyanadella": "Satya Nadella is the CEO of Microsoft.",
-        "AdaLovelace": "Ada Lovelace was the first computer programmer."
-        "Harshita": "JFS Tainee,IARE Student."
+        "AdaLovelace": "Ada Lovelace was the first computer programmer.",
+        "Harshita": "JFS Trainee, IARE Student."
     };
-
-    if (name === "") {
-        photo.style.display = "none";
-        info.innerHTML = "Please select a person from the dropdown.";
-        return;
-    }
 
     photo.src = photos[name];
     photo.style.display = "block";
     info.innerHTML = details[name];
-
-    // ⭐ Apply special frame ONLY for Elon Musk
-    if (name === "james") {
-        photo.classList.add("photo-james");
-		photo.classList.add("photo-james-blue");
-    }
 }
-
-        
